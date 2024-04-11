@@ -15,6 +15,8 @@ app.use(cookieParser());
 
 app.use("/api/users", userRoutes);
 
+const __dirname = path.resolve();
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
